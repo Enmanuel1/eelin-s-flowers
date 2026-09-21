@@ -17,5 +17,17 @@
 .particles i{width:2px;height:2px;left:calc(var(--x) * 1%);top:calc(var(--y) * 1%);background:#fff4bd;opacity:.32;box-shadow:0 0 6px #f7d76b88;animation:starTwinkle var(--duration) ease-in-out var(--delay) infinite}
 @keyframes starTwinkle{0%,100%{opacity:.2;transform:scale(.75)}50%{opacity:.95;transform:scale(1.35)}}
 
+/* Alternating warm/cool yellows give every petal its own light and shadow. */
+.petal.tone-0{background:linear-gradient(90deg,#b96f10 0,#e5a226 34%,#ffe797 56%,#c77a12 100%)}
+.petal.tone-1{background:linear-gradient(90deg,#d28b16 0,#f6c64a 39%,#fff3b5 58%,#dc9318 100%)}
+.petal.tone-2{background:linear-gradient(90deg,#c98013 0,#f0b837 34%,#fff9c7 55%,#e2a328 100%)}
+.inner-petal.tone-0{background:linear-gradient(90deg,#c57a13,#f1b632 50%,#d98916)}
+.inner-petal.tone-1{background:linear-gradient(90deg,#e0a126,#fff0a0 52%,#d99217)}
+.inner-petal.tone-2{background:linear-gradient(90deg,#d58a18,#f8cf57 48%,#e09a1c)}
+.petal:after{content:'';position:absolute;inset:7% 12%;background:linear-gradient(105deg,transparent 18%,#fffde2b8 52%,transparent 76%);opacity:.15;mix-blend-mode:screen;pointer-events:none}
+.is-bloomed .petal{filter:saturate(1.12) brightness(1.06)}
+.is-bloomed .petal:after{animation:petalSheen .7s ease-out var(--delay) both}
+@keyframes petalSheen{0%{opacity:0;transform:translateY(14px) scale(.7)}48%{opacity:.88}100%{opacity:.32;transform:translateY(-5px) scale(1)}}
+
 /* Reading comfort for a 393px-wide iPhone 15 viewport. */
 @media (max-width:430px){.scene{padding-inline:22px}.lead{font-size:14px;line-height:1.7;color:#fff5dfd9}.date{font-size:11px}.after-bloom{max-width:355px}.after-bloom p{font-size:16px;line-height:1.6}.letter-cta{min-height:50px;padding-inline:23px;font-size:14px}.letter-layer{padding-inline:12px}.paper{max-height:calc(100svh - 28px)}.paper-content{padding:56px 27px 42px}.paper-content p{font-size:17px;line-height:1.76;margin-bottom:21px;letter-spacing:.002em}.paper-content .letter-greeting{font-size:23px;line-height:1.35;margin-bottom:23px}.paper-content .signature{font-size:33px}.close-letter{width:42px;height:42px;margin:10px 10px -38px 0}.heart-button{padding:10px;font-size:17px}.surprise-message{font-size:18px;line-height:1.58}.envelope-scene{height:min(700px,92svh)}} 
