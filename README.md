@@ -1,16 +1,23 @@
-# React + Vite
+# Para Eelin, con amor 💛
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Una experiencia interactiva hecha con React y Vite para el Día de las Flores Amarillas.
 
-Currently, two official plugins are available:
+## Desarrollo local
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+Abre la dirección que muestra Vite (normalmente `http://localhost:5173`). Para una comprobación de producción:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm run build
+npm run preview
+```
 
-## Expanding the Oxlint configuration
+## Desplegar en Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Importa este repositorio en Vercel y deja los valores detectados por defecto: framework **Vite**, comando de build `npm run build`, y directorio de salida `dist`. No se necesitan variables de entorno.
+
+El texto de la carta está aislado en `src/content/letter.js` para poder modificarlo sin tocar la experiencia visual.
